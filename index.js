@@ -45,7 +45,7 @@ pool.connect((err, client, release) => {
 	})
 })
 
-app.get('/', (req, res) => {
+app.get('/testdata', (req, res, next) => {
 	console.log("TEST DATA :");
 	pool.query('Select * from test')
 		.then(testData => {
@@ -68,4 +68,4 @@ const server = app.listen(3000, function () {
 	// res.status(200).send('Ok');
 //   });
 
-// polakrit
+
