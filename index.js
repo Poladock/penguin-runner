@@ -64,6 +64,6 @@ const server = app.listen(3000, function () {
 
 //27041400
 
-app.get('/healthcheck', (req, res) => {
-	res.status(200).send('Ok');
-  });
+// app.get('/healthcheck', (req, res) => {
+	// res.status(200).send('Ok');
+//   });
