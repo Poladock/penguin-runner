@@ -45,7 +45,7 @@ pool.connect((err, client, release) => {
 	})
 })
 
-app.get('/test', (req, res, next) => {
+app.get('/', (req, res, next) => {
 	console.log("TEST DATA :");
 	pool.query('Select * from test')
 		.then(testData => {
