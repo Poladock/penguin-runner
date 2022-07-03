@@ -18,6 +18,12 @@ const pool = new Pool({
 	port: 5432
 });
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 
 /* To handle the HTTP Methods Body Parser
 is used, Generally used to extract the
