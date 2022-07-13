@@ -31,6 +31,7 @@ entire body portion of an incoming
 request stream and exposes it on req.body
 */
 const bodyParser = require('body-parser');
+app.use(body())
 const { response } = require('express');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -58,6 +59,12 @@ app.get('/question', (req, res, next) => {
 			console.log(testData);
 			res.send(testData.rows);
 		})
+})
+
+app.post('/question',function(req,res){
+	data={
+		question:req.query.fname
+	}
 })
 
 // Require the Routes API
