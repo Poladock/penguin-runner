@@ -53,7 +53,7 @@ pool.connect((err, client, release) => {
 
 app.get('/question', (req, res, next) => {
 	console.log("TEST DATA :");
-	pool.query('Select * from question')
+	pool.query('Select * from box')
 		.then(testData => {
 			console.log(testData);
 			res.send(testData.rows);
